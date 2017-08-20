@@ -1,0 +1,10 @@
+black
+blue
+red
+green
+yellow
+magenta
+cyan
+white
+git
+dance
