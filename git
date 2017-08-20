@@ -1,0 +1,9 @@
+#!/bin/bash
+REALGIT=/usr/bin/git
+
+set -e
+
+$REALGIT $@
+if [ "$1" != "--version" ]; then
+	pwd > ~/.lastgitdir
+fi

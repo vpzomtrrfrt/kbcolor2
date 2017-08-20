@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ "$1" = "dance" ]; then
+	touch .dancekbenabled
+	exit
+else
+	rm -f .dancekbenabled
+fi
+
+if [ "$1" = "git" ]; then
+	touch .gitkbenabled
+	exit
+else
+	rm -f .gitkbenabled
+fi
+
+kbcolor "$1"
