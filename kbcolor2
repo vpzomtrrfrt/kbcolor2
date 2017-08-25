@@ -1,16 +1,18 @@
 #!/bin/bash
 if [ "$1" = "dance" ]; then
-	touch .dancekbenabled
-	exit
+	touch ~/.dancekbenabled
+	SPECIAL=true
 else
-	rm -f .dancekbenabled
+	rm -f ~/.dancekbenabled
 fi
 
 if [ "$1" = "git" ]; then
-	touch .gitkbenabled
-	exit
+	touch ~/.gitkbenabled
+	SPECIAL=true
 else
-	rm -f .gitkbenabled
+	rm -f ~/.gitkbenabled
 fi
 
-kbcolor "$1"
+if [ -z "$SPECIAL" ]; then
+	kbcolor "$1"
+fi
